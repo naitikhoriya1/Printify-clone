@@ -18,13 +18,17 @@ const IntegrationPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-center px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-center px-4 sm:px-6 lg:px-8">
       {/* Platform Grid */}
-      <div className="relative grid grid-cols-4 gap-32 items-center">
+      <div className="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-16 lg:gap-32 items-center">
         {/* Central Green Icon */}
-        <div className="col-span-3 flex justify-center mb-10">
-          <div className="bg-green-500 w-24 h-24 flex items-center justify-center rounded-lg shadow-lg">
-            <img src={logo1} alt="Main Icon" className="w-12 h-12" />
+        <div className="col-span-2 sm:col-span-3 lg:col-span-3 flex justify-center mb-10">
+          <div className="bg-green-500 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex items-center justify-center rounded-lg shadow-lg">
+            <img
+              src={logo1}
+              alt="Main Icon"
+              className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
+            />
           </div>
         </div>
 
@@ -32,12 +36,12 @@ const IntegrationPage = () => {
         {platforms.map((platform, index) => (
           <div
             key={index}
-            className="relative w-24 h-24 bg-white flex items-center justify-center rounded-lg shadow-lg"
+            className="relative w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white flex items-center justify-center rounded-lg shadow-lg"
           >
             <img
               src={platform.logo}
               alt={platform.name}
-              className="w-12 h-12"
+              className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
             />
           </div>
         ))}
